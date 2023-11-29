@@ -1,12 +1,10 @@
 using BlazorServerApp1.Client.Pages;
 using BlazorServerApp1.Components;
-using BlazorServerApp1.Components.Pages;
+using BlazorServerApp1.Components.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddSingleton<Home>();
-builder.Services.AddSingleton<Counter>();
-builder.Services.AddSingleton<Weather>();
+builder.Services.AddSingleton<CounterService>();
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
